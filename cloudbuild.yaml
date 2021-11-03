@@ -1,0 +1,14 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: 
+  - 'build' 
+  - '-t' 
+  - 'us-east1-docker.package.dev/$PROJECT_ID/atm-test/cj-test-docker' 
+  - '--label' 
+  - 'org.opencontainers.image.revision=$COMMIT_SHA' 
+  - '--label' 
+  - 'com.atomist.containers.image.dockerfile=docker/Dockerfile' 
+  - '-f' 
+  - 'docker/Dockerfile' 
+  - '.'
+images: ['us-east1-docker.package.dev/$PROJECT_ID/atm-test/cj-test-docker']
