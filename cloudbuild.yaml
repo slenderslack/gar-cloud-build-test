@@ -3,7 +3,7 @@ steps:
   args: 
   - 'build' 
   - '-t' 
-  - 'us-east1-docker.package.dev/$PROJECT_ID/atmtest/gar-cloud-build-test' 
+  - 'us-east1-docker.pkg.dev/$PROJECT_ID/atmtest/gar-cloud-build-test' 
   - '--label' 
   - 'org.opencontainers.image.revision=$COMMIT_SHA' 
   - '--label' 
@@ -11,4 +11,4 @@ steps:
   - '-f' 
   - 'docker/Dockerfile' 
   - '.'
-images: ['us-east1-docker.package.dev/$PROJECT_ID/atmtest/gar-cloud-build-test']
+images: ['us-east1-docker.pkg.dev/$PROJECT_ID/atmtest/gar-cloud-build-test']
